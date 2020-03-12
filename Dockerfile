@@ -3,7 +3,7 @@ FROM python:3.8.2
 # Install Glances
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		git \
-	&& pip install 'psutil>=5.4.7,<5.5.0' bottle==0.12.13 \
+	&& pip install 'psutil>=5.7.0' bottle \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN git clone -b v3.1.4 https://github.com/nicolargo/glances.git
